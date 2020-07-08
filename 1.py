@@ -1,8 +1,11 @@
-from tkiner as tk
+import tkinter as tk
 
 
 root = tk.Tk()
 
-label(root, text,=;'second commit').pack()
+a1=tk.Label(root, text='')
+a1.pack()
+b1=tk.Button(root, text='get turn !', command=turn)
+b1.pack()
 
-root.maianloop()
+root.mainloop()
