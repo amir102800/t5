@@ -1,11 +1,25 @@
 import tkinter as tk
+from datetime import datetime
 
+
+def turn():
+    numbers.append(len(numbers)+1)
+    print(numbers)
+    d = datetime.now()
+    a3.config(text=d.strftime('%c'))
+    a2.config(text=numbers[-1])
 
 root = tk.Tk()
 
-a1=tk.Label(root, text='')
-a1.pack()
+numbers=[]
+
+a3=tk.Label(root, text= '')
+a3.pack()
+
 b1=tk.Button(root, text='get turn !', command=turn)
 b1.pack()
+
+a2=tk.Label(root, text='')
+a2.pack()
 
 root.mainloop()
