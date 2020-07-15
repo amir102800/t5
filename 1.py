@@ -14,12 +14,15 @@ root = tk.Tk()
 numbers=[]
 
 a3=tk.Label(root, text= '')
-a3.pack()
+a3.grid()
 
 b1=tk.Button(root, text='get turn !', command=turn)
 b1.pack()
 
 a2=tk.Label(root, text='')
 a2.pack()
+
+
+
 
 root.mainloop()
