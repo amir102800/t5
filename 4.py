@@ -6,6 +6,8 @@ def stop():
 
 
 root = tk.Tk()
+timer={'left':1200,
+       'right':1200}
 
 tk.Label(root,
          text='left player',
@@ -51,8 +53,10 @@ tk.Button(root,
 
 tk.Button(root
           , text="cancel"
-          , command=stop
+          , command=root.destroy
           , font=("courier", 30)) \
     .grid(row=4, column=0, columnspan=2)
+
+
 
 root.mainloop()
