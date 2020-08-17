@@ -60,13 +60,13 @@ tk.Label(root,
 
 # Timer#############################################
 l_timer = tk.StringVar()
-l_timer.set('20:00')
+l_timer.set('00:00')
 tk.Label(root,
          cnf=l_cnf,
          textvariable=l_timer,
          font=('courier', 20)).grid(row=1, column=0)
 r_timer = tk.StringVar()
-r_timer.set('20:00')
+r_timer.set('00:00')
 tk.Label(root,
          cnf=l_cnf,
          textvariable=r_timer,
