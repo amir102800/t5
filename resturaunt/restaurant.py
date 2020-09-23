@@ -1,18 +1,19 @@
 import tkinter as tk
 import tkinter.ttk as ttk
+from tkinter  import Image,PhotoImage
 
 
 
-labek_cnf={"bg":"91ff35"}
 Label_cnf={"bg":"#f50057"}
 
 
 # $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ food information $$$$$$$$$$$$$$$$$$$$$$$$$$$$ #
 i ={
-     "1" : {"name": 'ye chiz bahal',
+     "1" : {"name": 'humburger',
             'rating':5 ,
             "review": 47,
-            "price":1.5},
+            "price":1.5,
+            "img": "howcuttingdo.gif"},
 }
 
 ###############################################################################
@@ -50,12 +51,16 @@ name = i['1']['name']
 tk.Label(f1 , text = name,cnf=Label_cnf) .grid(row=0, column=0)
 
 rating =  i['1']['rating'] * '★'+'('+str(i['1']['review']) + ')'
-tk.Label(f1 , text= rating ,cnf=Label_cnf) .grid(row= 1 , column=0)
+tk.Label(f1 , text= rating ,cnflLabel_cnf) .grid(row= 1 , column=1)
 
 price =str(i['1']['price']) + "$"
-tk.Label(f1 , text= price , cnf=Label_cnf).grid(row= 2 , column=0)
+tk.Label(f1 , text= price , cnf=Label_cnf).grid(row= 0 . column=1)
 
+des =str(i['1']['desciription']) + "$"
+tk.Label(f1 , text= price , cnf=Label_cnf).grid(row= 0 , column=1)
 
+img =PhotoImage(file=i['1']['img']).subsample(4)
+tk.Label(f1 , image= img , borderwidth=12 , relief='solid') .grid(row=0  , column=2 , rowspan=4)
 
 
 root.mainloop()
